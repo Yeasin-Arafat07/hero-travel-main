@@ -103,7 +103,86 @@ nav ul .home{
 .middle-li {
     padding: 16px 0;
 }
-/* Main-popular style end */
+
+/*popular style end */
+/* choose style start */
+.choose-content {
+    text-align: center;
+}
+.choose-content h3 {
+    font-size: 2.5;
+    font-weight: 800;
+    color: var(--secondar-color);
+}
+.choose-content p {
+    color: var(--paragrap-color);
+    padding: 25px 0 45px 0;
+}
+.choose-card {
+    display: flex;
+    gap: 30px;
+}
+.card {
+    width: 573px;
+    height: 284px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+    padding: 30px 50px 30px 30px;
+}
+.card-center {
+    margin: 20px auto;
+}
+.card .icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondar-color);
+    padding-top: 32px;
+    padding-bottom: 10px;
+}
+.card p {
+    color: var(--paragrap-color);
+}
+/* choose style end */
+/* Newsletter style start */
+.newsletter-container {
+    display: flex;
+    gap: 50px;
+}
+.contact input[type="text"], input[type="email"], button {
+    display: block;
+    border: 0;
+    padding: 17px 60px 17px 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+}
+.Contact .primary-btn {
+    padding: 17px 50px 17px 50px;
+    font-weight: 500;
+    
+}
+.newsletter-content {
+    border: 1px solid var(--primary-color);
+    border-radius: 9px;
+    padding: 40px;
+}
+.newsletter-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondar-color);
+}
+.newsletter-content p {
+    color: var(--paragrap-color);
+    padding: 5px 0px 20px;
+}
+
+/* Newsletter style end */
+
 /* footer style start */
 .footer {
     background: rgba(19, 19, 24, 0.05);
@@ -125,8 +204,6 @@ nav ul .home{
 }
 .footer-container p {
     color: var(--paragrap-color);
-    width: 590px;
-    margin: 0 auto;
     padding: 20px 0 40px 0;
 }
 .footer ul {
@@ -135,6 +212,12 @@ nav ul .home{
     list-style: none;
     gap: 30px;
     padding-bottom: 80px;
+}
+.footer p {
+    color: var(--paragrap-color);
+}
+hr {
+    color: var(--paragrap-color);
 }
 /* footer style end */
 
@@ -147,11 +230,17 @@ nav ul .home{
 /* Responsive work */
 /* responsive for mobile */
 @media screen and (max-width:576px) {
-    .popular-container {
+    .popular-container, 
+    .footer-content {
         flex-direction: column;
     }
     section {
         padding: 20px 80px;
+    }
+    .popular-img {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
     
 }
