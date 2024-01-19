@@ -4,6 +4,8 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
     font-family: 'Merriweather', serif;
     font-family: 'Mulish', sans-serif;
     font-family: 'Work Sans', sans-serif;
@@ -15,7 +17,7 @@ section {
 /* shared items */
 :root {
     --primary-color:#FF5400;
-    --secondar-color:#131318;
+    --secondary-color:#131318;
     --paragrap-color: #5A5A5D;
 }
 .primary-btn {
@@ -52,7 +54,7 @@ nav ul .home{
     color: var(--primary-color);
 }
 .nav-logo h3{
-    color: var(--secondar-color);
+    color: var(--secondary-color);
     font-size: 2.25rem;
     font-weight: 800;
     padding-left: 10px;
@@ -62,7 +64,7 @@ nav ul .home{
 }
 /* banner style start */
 .banner {
-    background-image: url('./Images/Group\ 13\ \(1\)\ \(1\).png');
+    background-image: url('/Images/Group\ 13\ \(1\)\ \(1\).png');
     background-repeat: no-repeat;
     width: 1140px;
     height: 500px;
@@ -80,6 +82,15 @@ nav ul .home{
 .banner-content p {
     color: #fff;
     padding-bottom: 40px;
+}
+.banner-form input[type="text"] {
+    padding: 9px 0 9px 6px;
+    border: none;
+    border-radius: 4px;
+}
+.banner-form .find {
+    background-color: var(--primary-color);
+    color: #fff;
 }
 /* banner style end */
 /* Main-popular style start */
@@ -105,6 +116,38 @@ nav ul .home{
 }
 
 /*popular style end */
+/* grid-style start */
+.grid-content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.grid-content h3 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.grid-content p {
+    color: var(--paragrap-color);
+    padding: 10px 0 30px 0;
+}
+.grid-content .grid-img {
+    height: 300px;
+    gap: 10px;
+    display: flex;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+}
+ .grid-text h3 {
+    position: absolute;
+    top:50% ;
+    /* left: 50%; */
+    color: #fff;
+    
+ }
+
+/* grid-style end */
 /* choose style start */
 .choose-content {
     text-align: center;
@@ -112,7 +155,7 @@ nav ul .home{
 .choose-content h3 {
     font-size: 2.5;
     font-weight: 800;
-    color: var(--secondar-color);
+    color: var(--secondary-color);
 }
 .choose-content p {
     color: var(--paragrap-color);
@@ -140,7 +183,7 @@ nav ul .home{
 .card h3 {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--secondar-color);
+    color: var(--secondary-color);
     padding-top: 32px;
     padding-bottom: 10px;
 }
@@ -174,7 +217,7 @@ nav ul .home{
 .newsletter-content h3 {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--secondar-color);
+    color: var(--secondary-color);
 }
 .newsletter-content p {
     color: var(--paragrap-color);
@@ -196,7 +239,7 @@ nav ul .home{
 .footer-content h3 {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--secondar-color);
+    color: var(--secondary-color);
     padding-left: 10px;
 }
 .footer-t {
@@ -227,15 +270,37 @@ hr {
 
 
 
+
 /* Responsive work */
 /* responsive for mobile */
 @media screen and (max-width:576px) {
     .popular-container, 
-    .footer-content {
+    .footer-content,
+    .choose-card,
+    .newsletter-container,
+    nav,
+    .nav-logo,
+    nav ul,
+    .banner-form input[type="text"],
+    .choose-card
+    {
         flex-direction: column;
     }
+    .banner, .popular-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .banner-form {
+        display: block;
+    }
+    .card {
+        width: auto;
+    }
     section {
-        padding: 20px 80px;
+        padding: 20px 10px;
+    }
+    header {
+        padding: 20px 10px;
     }
     .popular-img {
         margin: 0;
